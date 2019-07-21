@@ -1,21 +1,0 @@
-server:
-  port: ${PORT:80}
-  
-spring:  jpa:    hibernate:      ddl-auto: create
-    show-sql: true
-    
-    # (MySQL version > 5.1 인 경우)  -> MySQL5InnoDBDialect else MySQLInnoDBDialect     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  main:    allow-bean-definition-overriding: true
-    
-  datasource:    url: jdbc:mysql://remotemysql.com:3306/oIDj79884W
-    username: oIDj79884W
-    password: OmzIpgbOkP
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  security:    user:      name: admin
-      password: admin
-      
-#    oauth2:#      client:                  #  mail:#    host: 
-    
-security:  oauth2:    client:      client-id: bd1c0a783ccdd1c9b9e4
-      client-secret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
-#      grant-type: authorization-code
