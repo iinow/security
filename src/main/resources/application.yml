@@ -3,6 +3,7 @@ server:
   
 spring:  jpa:    hibernate:      ddl-auto: create
     show-sql: true
+    open-in-view: false
     
     # (MySQL version > 5.1 인 경우)  -> MySQL5InnoDBDialect else MySQLInnoDBDialect     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   main:    allow-bean-definition-overriding: true
@@ -11,6 +12,7 @@ spring:  jpa:    hibernate:      ddl-auto: create
     username: oIDj79884W
     password: OmzIpgbOkP
     driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: embedded
   security:    user:      name: admin
       password: admin
       
@@ -18,4 +20,6 @@ spring:  jpa:    hibernate:      ddl-auto: create
     
 security:  oauth2:    client:      client-id: bd1c0a783ccdd1c9b9e4
       client-secret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+      
+  
 #      grant-type: authorization-code
