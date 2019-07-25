@@ -13,13 +13,16 @@ spring:  jpa:    hibernate:      ddl-auto: create
     password: OmzIpgbOkP
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: embedded
-  security:    user:      name: admin
+
+  #authorization 인증 서버 접속 계정 정보
+  security:    user:      name: admin
       password: admin
+      roles:      - read
       
-#    oauth2:#      client:                  #  mail:#    host: 
-    
-security:  oauth2:    client:      client-id: bd1c0a783ccdd1c9b9e4
-      client-secret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+#아래가 client 접속 계정 정보 -> 예를 들어서 카톡, 페이스북, github 와 같은 곳에서 받은 client id 와 client secret 을 저장한다.      
+security:
+  oauth2:    client:      client-id: auth
+      client-secret: authsec
       
   
 #      grant-type: authorization-code
